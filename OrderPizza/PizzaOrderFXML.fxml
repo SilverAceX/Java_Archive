@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="381.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PizzaOrderFXMLController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#9ab6d1" height="138.0" layoutX="23.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="127.0" />
+      <TextField fx:id="txtQuantity" layoutX="72.0" layoutY="267.0" prefHeight="26.0" prefWidth="78.0" />
+      <Label layoutX="71.0" layoutY="30.0" text="Sizes" />
+      <Label layoutX="22.0" layoutY="272.0" text="Quantity" />
+      <Group layoutX="250.0" layoutY="55.0" />
+      <Button fx:id="btnOrder" layoutX="160.0" layoutY="20.0" mnemonicParsing="false" onAction="#OnClickOrder" prefHeight="50.0" prefWidth="206.0" text="Make Order" />
+      <Button fx:id="btnReset" layoutX="160.0" layoutY="91.0" mnemonicParsing="false" onAction="#OnClickReset" prefHeight="50.0" prefWidth="206.0" text="Reset" />
+      <RadioButton fx:id="radSmall" layoutX="45.0" layoutY="55.0" mnemonicParsing="false" text="Small">
+         <toggleGroup>
+            <ToggleGroup fx:id="pzSizes" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radMedium" layoutX="45.0" layoutY="80.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="66.0" text="Medium" toggleGroup="$pzSizes" />
+      <RadioButton fx:id="radXLarge" layoutX="45.0" layoutY="130.0" mnemonicParsing="false" text="X-Large" toggleGroup="$pzSizes" />
+      <RadioButton fx:id="radLarge" layoutX="45.0" layoutY="105.0" mnemonicParsing="false" text="Large" toggleGroup="$pzSizes" />
+      <TextArea fx:id="taDisplay" layoutX="163.0" layoutY="174.0" prefHeight="119.0" prefWidth="200.0" />
+      <Label alignment="CENTER" layoutX="163.0" layoutY="152.0" prefHeight="18.0" prefWidth="200.0" text="Order" textAlignment="CENTER" />
+      <CheckBox fx:id="chkPepperoni" layoutX="25.0" layoutY="170.0" mnemonicParsing="false" text="Pepperoni" />
+      <CheckBox fx:id="chkMushroom" layoutX="25.0" layoutY="192.0" mnemonicParsing="false" text="Mushrooms" />
+      <CheckBox fx:id="chkGreen" layoutX="25.0" layoutY="213.0" mnemonicParsing="false" text="Green Peppers" />
+      <CheckBox fx:id="chkBacon" layoutX="25.0" layoutY="235.0" mnemonicParsing="false" text="Bacon" />
+   </children>
+</AnchorPane>
